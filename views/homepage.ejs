@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Login</title>
+    <div class="col-sm-3">
+    <marquee>Pizzas Jorge</marquee>
+    </div>
+    <div class="col-sm-3">
+
+    <marquee direction="right"> Pizzas Jorge</marquee>
+    </div>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script language="JavaScript">
+
+      function capturar()
+      {
+        var resultado="ninguno";
+
+        var porNombre=document.getElementsByName("quiz");
+        // Recorremos todos los valores del radio button para encontrar el
+        // seleccionado
+        for(var i=0;i<porNombre.length;i++)
+        {
+          if(porNombre[i].checked)
+            resultado=porNombre[i].value;
+        }
+
+        document.getElementById("resultado").innerHTML=" \
+            Por Nombre: "+resultado;
+        alert("Resultado"+resultado);
+      }
+
+      </script>
+  </head>
+
+  <body background="http://files.alimentos-akira.webnode.com.ve/200000008-8b08d8c031/pizza.png">
+
+   <!-- <h1>Login</h1>
+
+    <% if (req.session.me) { %>
+    <a href="/logout" style="color: brown">Logout</a>
+    <% } else { %>
+    <a href="/login" style="color: brown">Login</a> | <a href="/signup" style="color:" >Registrarse</a>
+    <% } %>
+
+
+   <form action="/boton" method="post">Título:
+     <input type="text" name="tiduo" size="70" value="TestMatrik">
+     <br><table>
+       <tbody><tr>
+         <td bgcolor="#F2FFF2">
+           <br>1. <textarea rows="2" name="p1" cols="54">
+           </textarea><br>a)
+           <input type="radio" name="R1">
+           <textarea rows="2" name="r11" cols="50">
+
+           </textarea><br>b)
+           <input type="radio" name="R1">
+           <textarea rows="2" name="r12" cols="50"></textarea><br>c)
+           <input type="radio" name="R1">
+           <textarea rows="2" name="r13" cols="50">
+           </textarea><br>
+           <p></p>
+         </td></tr>
+       <tr align="center" height="50">
+       </tr>
+       </tbody>
+
+     </table>
+     <input type="submit">
+-->
+ <!--  <form name="test">
+     <table width="100%"><tbody><tr><td align="center"><table>
+             <tbody><tr>
+               <td>
+                 <p align="center">TestMatrik</p></td>
+             </tr></tbody></table></td></tr><tr><td>
+           <table><tbody><tr><td><font size="4" color="#FF00FF">1. </font></td><td bgcolor="#F2FFF2" width="100%">pregunta</td></tr></tbody></table>
+           <table><tbody><tr><td width="25">&nbsp;</td><td>a) </td><td><input type="radio" name="resp1"></td><td>1</td></tr></tbody></table>
+           <table><tbody><tr><td width="25">&nbsp;</td><td>b) </td><td><input type="radio" name="resp1"></td><td>2</td></tr></tbody></table>
+           <table><tbody><tr><td width="25">&nbsp;</td><td>c) </td><td><input type="radio" name="resp1"></td><td>3</td></tr></tbody></table>
+           <div class="radio"><label><input type="radio" name="quiz" id="1" value="1"> &lt;a&gt;http://www.w3schools.com&lt;/a&gt;</label></div>
+         </td></tr>
+       <tr><td align="center" height="50"><input type="hidden" value="a" name="tras">
+           <input type="button" value="Puntuación" name="resultados" onclick="prueba()" style="background-color: #FFCC66">
+           <input type="reset" value="Limpiar" name="limpar" style="background-color: #FFCC66"></td></tr>
+       </tbody></table></form>
+       <form role="form" name="quizform" action="quiztest.asp?qtest=HTML" method="post">
+-->
+   <form role="form" name="quizform">
+     <div class="radio"><label><input type="radio" name="quiz" id="1" value="1"> &lt;a href="http://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="2" value="2"> &lt;a&gt;http://www.w3schools.com&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="3" value="3"> &lt;a name="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="4" value="4"> &lt;a url="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</label></div>
+     <h1></h1>
+
+     <br>
+     <div class="radio"><label><input type="radio" name="quiz" id="1" value="1"> &lt;a href="http://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="2" value="2"> &lt;a&gt;http://www.w3schools.com&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="4" value="3"> &lt;a name="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</label></div>
+     <div class="radio"><label><input type="radio" name="quiz" id="3" value="4"> &lt;a url="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</label></div>
+
+     <input type="submit" class="w3-btn w3-orange w3-large w3-text-white"  onclick="capturar()">
+
+   </form>
+   <div id="resultado"></div>
+      <!--SCRIPTS   value=" Next "-->
+
+      <!--SCRIPTS END-->
+  </body>
+</html>
