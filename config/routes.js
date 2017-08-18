@@ -6,6 +6,9 @@ module.exports.routes = {
   'get /signup': { view: 'user/signup' },
   '/test': { view: 'user/test' },
   '/welcome': { view: 'user/welcome' },
+  '/EPNDescription': { view: 'user/EPNDescription' },
+  '/UCEDescription': { view: 'user/UCEDescription' },
+  '/UPSDescription': { view: 'user/UPSDescription' },
   // Endpoints
   'post /login': 'UserController.login',
   'post /signup': 'UserController.signup',
