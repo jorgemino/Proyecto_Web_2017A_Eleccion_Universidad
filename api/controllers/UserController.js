@@ -16,22 +16,13 @@ module.exports = {
     return res.login({
       email: req.param('email'),
       password: req.param('password'),
+      name:req.param('name'),
       successRedirect: '/test',
       });
     },
-  boton:function (req,res){
-  //var tiduo=parent.frames[1].document.datos.tiduo.value
-  cadeasolu=""
-  /*for(i=1;i<=numpreg;i++){
- //   for(j=1;j<=nrporpreg;j++){
-      //'parent.frames[1].document.datos.R'+i+'['+(j-1)+'].checked'
-    }*/
-  //    if(eval()==true){
-        //cadeasolu+=alfa.substring(j-1,j);break}
-    return res.boton({
-      redirect: console.log("sirvio")
+  usuario:function (req, res) {
 
-    });
+    return res.param('name')
   },
 
 

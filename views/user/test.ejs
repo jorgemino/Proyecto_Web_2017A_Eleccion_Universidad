@@ -71,7 +71,7 @@
     else if(uni>=130&&uni<170)
     {
       alert("Universidad Central del Ecuador "+document.total.puntaje.value)
-      window.location="UCEDescription";
+      window.location="UCEDescription/20";
     }
     else{
       alert("Universidad Salesiana "+document.total.puntaje.value)
@@ -411,6 +411,13 @@
         </script></b>: has contestado correctamente a <input name="score" size="2"> preguntas de un total de <input name="outof" size="2">Puntaje total<input name="puntaje" size="2"><br><br>
       Has obtenido un porcentaje de calificación del <input name="percent" size="2">%
       <br><br>
+
+      <form action="/cookies" method="post">
+        <p>Valor 1: <input type="text" name="T1" size="20"></p>
+        <p>Valor 2: <input type="text" name="T2" size="20"></p>
+        <p>Valor 3: <input type="text" name="T3" size="20"></p>
+        <p><input type="submit" value="Sumar" name="B1"></p>
+      </form>
       <a href="/">Regresar a la ventana principal</a>
     </font>
   </form></div>
