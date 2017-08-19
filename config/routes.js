@@ -9,6 +9,7 @@ module.exports.routes = {
   '/EPNDescription': { view: 'user/EPNDescription' },
   '/UCEDescription': { view: 'user/UCEDescription' },
   '/UPSDescription': { view: 'user/UPSDescription' },
+  'get /landin': { view: 'landing' },
   // Endpoints
   'post /login': 'UserController.login',
   'post /signup': 'UserController.signup',
