@@ -8,7 +8,7 @@
 <body>
 
 <script><!--
-  var name=prompt("Por favor, introduce tu nombre","")
+  var name="Aspirante"
   // -->
 </script>
 
@@ -57,25 +57,23 @@
 
 
     if (con < 1) {
+      uni=document.total.score.value*10
+      if(uni>=170)
+      {
+        alert("Escuela Politecnica Nacional "+document.total.puntaje.value)
+        window.location="EPNDescription";
+      }
+      else if(uni>=130&&uni<170)
+      {
+        alert("Universidad Central del Ecuador "+document.total.puntaje.value)
+        window.location="UCEDescription/";
+      }
+      else{
+        alert("Universidad Salesiana "+document.total.puntaje.value)
+        window.location="UPSDescription/";
+      }
     } else {
-      alert("Atención: no has contestado la pregunta # " + faltantes + "ssc")
-
-
-    }
-    uni=document.total.score.value*10
-    if(uni>=170)
-    {
-      alert("Escuela Politecnica Nacional "+document.total.puntaje.value)
-      window.location="EPNDescription";
-    }
-    else if(uni>=130&&uni<170)
-    {
-      alert("Universidad Central del Ecuador "+document.total.puntaje.value)
-      window.location="UCEDescription/20";
-    }
-    else{
-      alert("Universidad Salesiana "+document.total.puntaje.value)
-      window.location="UPSDescription";
+      alert("Atención: no has contestado la pregunta # \n" + faltantes )
     }
   }
   // -->
@@ -411,13 +409,6 @@
         </script></b>: has contestado correctamente a <input name="score" size="2"> preguntas de un total de <input name="outof" size="2">Puntaje total<input name="puntaje" size="2"><br><br>
       Has obtenido un porcentaje de calificación del <input name="percent" size="2">%
       <br><br>
-
-      <form action="/cookies" method="post">
-        <p>Valor 1: <input type="text" name="T1" size="20"></p>
-        <p>Valor 2: <input type="text" name="T2" size="20"></p>
-        <p>Valor 3: <input type="text" name="T3" size="20"></p>
-        <p><input type="submit" value="Sumar" name="B1"></p>
-      </form>
       <a href="/">Regresar a la ventana principal</a>
     </font>
   </form></div>

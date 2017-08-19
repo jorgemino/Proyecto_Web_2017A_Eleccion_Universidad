@@ -16,8 +16,8 @@ module.exports = {
       type: 'string',
       required: true
     },
-    pizza: {
-      collection: 'Pizzas',
+    preguntas: {
+      collection: 'Preguntas',
       via: 'fkIdUsuario'
     }
   },

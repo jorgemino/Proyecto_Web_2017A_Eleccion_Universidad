@@ -5,3 +5,9 @@
 function leeselect(){
   variable=document.getElementById("elselect").value;
 }
+function usuario(){
+  nombrer=document.getElementById("name").value;
+  console.log(nombrer);
+  return nombrer;
+  //variable=document.getElementById("elselect").value;
+}

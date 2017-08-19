@@ -7,12 +7,32 @@
 
 module.exports = {
   attributes: {
-    ingredientes: {
+    cabecerap: {
       type: "string"
     },
-    precio: {
-      type: "float"
+    pregunta: {
+      type: "string"
     },
+    opcion1: {
+      type: "string"
+    },
+    opcion2: {
+      type: "string"
+    },
+    opcion3: {
+      type: "string"
+    },
+    opcion4: {
+      type: "string"
+    },
+    opcion5: {
+      type: "string"
+    },
+    correcta:
+      {
+        type:"int"
+      },
+
 
     fkIdUsuario:{
       model:'User',
