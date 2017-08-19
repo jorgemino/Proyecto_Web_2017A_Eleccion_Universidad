@@ -76,7 +76,7 @@ module.exports = {
       }
 
       // Otherwise if this is an HTML-wanting browser, redirect to /welcome.
-      return res.redirect('/welcome');
+      return res.redirect('/test');
     });
   },
   quiz:function (){
