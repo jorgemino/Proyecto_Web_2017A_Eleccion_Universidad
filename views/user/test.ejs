@@ -76,6 +76,48 @@
       alert("Atención: no has contestado la pregunta # \n" + faltantes )
     }
   }
+  function quizp(){
+    var i = 0
+    var total=document.forms.length-1
+    var ncorrect=0
+    var response=new Array(total)
+    var theForms=new Array(total)
+    var answer=new Array(total)
+
+    for (i=1; i<=total;i++)
+      theForms[i]=document.forms[i-1]
+
+    for (i=1; i <= total; i++)
+      response[i]=theForms[i].answer.selectedIndex
+
+    for (i=1; i<=total;i++)
+      answer[i]=theForms[i].correct.value
+    var faltantes="";
+    var flag=true
+    var con=0;
+    var uni=0;
+    for (i=1; i <= total; i++)
+      if (response[i]==0) {
+        faltantes+=i+"\n"
+        con+=1
+        flag=false
+      }
+    if (flag) {
+      for (i=1; i <= total; i++)
+        if (response[i]==answer[i]) ncorrect++
+      document.total.score.value = ncorrect
+      var per =  Math.round((ncorrect / total) * 100)
+      document.total.percent.value = per
+      document.total.outof.value=total
+      document.total.puntaje.value=document.total.score.value*10
+
+    } //end if (flag)
+    if (con < 1) {
+
+    } else {
+      alert("Atención: no has contestado la pregunta # \n" + faltantes )
+    }
+  }
   // -->
 </script>
 
@@ -396,11 +438,11 @@
 
 
   </font><form  method="post" name="total"><font face="Arial" size="3">
-      <input name="Button" onclick="quiz()" type="button" value="Para el resultado, haz clic aquí">
 
     <!--  <a class="nav-link" href="/universityDescription">Verificar Resultados y Universidad </a>-->
 
-
+      <input name="Button" onclick="quizp()" type="button" value="Desplegar resultados">
+      <input name="Button" onclick="quiz()" type="button" value="Universidad calculada">
       <br><br>
 
       <b><script language="Javascript"><!--
@@ -408,6 +450,8 @@
           // -->
         </script></b>: has contestado correctamente a <input name="score" size="2"> preguntas de un total de <input name="outof" size="2">Puntaje total<input name="puntaje" size="2"><br><br>
       Has obtenido un porcentaje de calificación del <input name="percent" size="2">%
+
+
       <br><br>
       <a href="/">Regresar a la ventana principal</a>
     </font>
